@@ -6,5 +6,5 @@ contains data files from [UCI Machine Learning Repository Drug Review Dataset](h
 ### data-analysis/
 code used to analyze data
 
-### text-processing
+### text-processing/
 text processing functions
