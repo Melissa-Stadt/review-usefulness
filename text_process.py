@@ -31,10 +31,10 @@ def freq_ngrams(data, sw, n_gram):
     return fd_sorted
 
 ## custom function for horizontal bar chart ##
-def set_bar_chart(df, color):
+def set_bar_chart(df, color = 'blue'):
     trace = go.Bar(
         y=df["word"].values[::-1],
-        x=df["wordcount"].values[::-1],
+        x=df["count"].values[::-1],
         showlegend=False,
         orientation = 'h',
         marker=dict(
