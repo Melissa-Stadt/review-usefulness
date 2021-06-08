@@ -4,6 +4,7 @@ Functions that can be used for text processing and evalutating n-grams
 """
 from basic_functions import*
 
+# plotting
 import plotly
 from plotly import tools
 import plotly.graph_objs as go
@@ -12,10 +13,15 @@ from collections import defaultdict
 
 import pandas as pd
 
+# text processing
 import nltk
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
+
+# spell check 
+from spellchecker import SpellChecker
+spell = SpellChecker()
 
 def generate_ngrams(text, sw, n_gram):
     # Input: text, sw is stopwords, n_gram is what n-gram number
@@ -53,3 +59,8 @@ def lemmatize(text):
     word_list = nltk.word_tokenize(text)
     lemma_words = ' '.join([lemmatizer.lemmatize(w) for w in word_list])
     return lemma_words
+
+def count_misspelled(text):
+    word_list = nltk.word_tokenize(text)
+    misspelled = spell.unknown(word_list)
+    return len(misspelled)
