@@ -12,6 +12,11 @@ from collections import defaultdict
 
 import pandas as pd
 
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer
+lemmatizer = WordNetLemmatizer()
+
 def generate_ngrams(text, sw, n_gram):
     # Input: text, sw is stopwords, n_gram is what n-gram number
     # Output: list n-grams for the given inputs
@@ -42,3 +47,9 @@ def set_bar_chart(df, color = 'blue'):
         ),
     )
     return trace
+
+def lemmatize(text):
+    # using WordNetLemmatizer returns the review lemmatized
+    word_list = nltk.word_tokenize(text)
+    lemma_words = ' '.join([lemmatizer.lemmatize(w) for w in word_list])
+    return lemma_words
