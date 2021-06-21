@@ -12,6 +12,7 @@ import plotly.graph_objs as go
 from collections import defaultdict
 
 import pandas as pd
+pd.options.mode.chained_assignment = None  # default='warn'
 
 # text processing
 import nltk

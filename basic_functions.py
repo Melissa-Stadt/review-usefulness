@@ -9,6 +9,7 @@ import IPython
 
 import numpy as np
 import pandas as pd
+pd.options.mode.chained_assignment = None  # default='warn'
 
 from num2words import num2words
 
@@ -44,6 +45,10 @@ def frac2words(frac):
     
     if whole != 0:
         frac_word = num2words(whole) + ' and ' + num2words(num) + ' over ' + num2words(denom)
+    elif num == 24 and denom == 7:
+        # if someone says "24/7" usually in this context would mean
+        # always so that will be the word here
+        frac_word = 'always'
     else:
         frac_word = num2words(num) + ' over ' + num2words(denom)
     return frac_word
