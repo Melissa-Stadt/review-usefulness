@@ -12,3 +12,5 @@ contains data files from [UCI Machine Learning Repository Drug Review Dataset](h
 **text_process.py** functions for processing text, generating lists of n-grams and their frequency
 
 **text-processing.ipynb** examples using some of the functions in the text_process.py
+
+**visualizations-ngrams.ipynb** bar plots of most frequent n-grams (i.e., word count, bigrams, trigrams, 4-grams) of the birth control data reviews
