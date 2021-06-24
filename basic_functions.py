@@ -67,3 +67,22 @@ def example_review(data, nums):
 def clean_review(text):
     # given a string removes HTML escape characters
     return unescape(text.strip(' "\'')).replace('\ufeff1', '')
+
+def is_useful_data(data,threshold):
+    # given a df with review and threshold for useful count
+    # returns 1 if review is useful and 0 if not
+    if data['usefulCount']>=threshold:
+        useful = 1
+    else:
+        useful = 0
+    return useful
+
+def is_useful(useful_cnt, threshold):
+    # given a usefulCount value 
+    # returns 1 if review is useful and 0 if not
+    if useful_cnt>=threshold:
+        useful = 1
+    else:
+        useful = 0
+    return useful
+    
