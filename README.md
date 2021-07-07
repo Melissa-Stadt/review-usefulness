@@ -14,3 +14,5 @@ contains data files from [UCI Machine Learning Repository Drug Review Dataset](h
 **text-processing.ipynb** examples using some of the functions in the text_process.py
 
 **visualizations-ngrams.ipynb** bar plots of most frequent n-grams (i.e., word count, bigrams, trigrams, 4-grams) of the birth control data reviews
+
+**analyze-date.ipynb** analyze how the date of the review might affect the usefulness of a review
