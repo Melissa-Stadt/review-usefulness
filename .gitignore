@@ -1,0 +1,4 @@
+
+.ipynb_checkpoints/data-analysis-checkpoint.ipynb
+*.ipynb
+*.pyc
