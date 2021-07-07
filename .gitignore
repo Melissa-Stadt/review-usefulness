@@ -1,3 +1,5 @@
 
 .ipynb_checkpoints/data-analysis-checkpoint.ipynb
 *.pyc
+.ipynb_checkpoints/visualizations-ngrams-checkpoint.ipynb
+.ipynb_checkpoints/date-of-review-checkpoint.ipynb
